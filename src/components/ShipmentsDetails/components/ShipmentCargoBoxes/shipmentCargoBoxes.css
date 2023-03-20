@@ -1,0 +1,14 @@
+.shipment-cargo-boxes-container{
+    margin-bottom: 1.875rem;
+}
+
+.shipment-cargo-boxes-title{
+    margin-bottom: 0.625rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 375px) {
+    .shipment-cargo-boxes-container{
+        margin-bottom: 3.125rem;
+    }
+}

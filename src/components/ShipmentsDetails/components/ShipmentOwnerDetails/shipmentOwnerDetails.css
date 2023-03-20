@@ -1,0 +1,23 @@
+.shipment-owner-details-container{
+    margin-bottom: 1.875rem;
+}
+.shipment-owner-name{
+    color: var(--white-color);
+    font-size: 4rem;
+    line-height: 4.625rem;
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-owner-name{
+        font-size: 2.875rem;
+        line-height: 3.625rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .shipment-owner-name{
+        font-size: 1.75rem;
+        line-height: 2.375rem;
+    }
+}
+

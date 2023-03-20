@@ -1,0 +1,22 @@
+.app-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 16.875rem)  1fr;
+    grid-template-rows: max-content 1fr;
+    height: calc(100vh - 3.1875rem * 2);
+    grid-gap: 3.125rem 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        min-height: calc(100vh - 2.25rem * 2);
+        grid-template-columns: minmax(auto, 12.5rem)  1fr;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .app-container{
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 1.875rem 2rem;
+
+    }
+}

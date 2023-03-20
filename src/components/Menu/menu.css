@@ -1,0 +1,8 @@
+.menu {
+    justify-self: end;
+    background: transparent;
+    outline: none;
+    border: none;
+    grid-column: 2;
+    grid-row: 1;
+}

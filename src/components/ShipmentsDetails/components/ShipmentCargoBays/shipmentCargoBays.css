@@ -1,0 +1,42 @@
+.shipment-cargo-bays-title{
+    font-size: 2.125rem;
+    line-height: 2.75rem;
+}
+
+.shipment-cargo-bays-count{
+    color: var(--white-color);
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-cargo-bays-title{
+        font-size: 1.625rem;
+        line-height: 2rem;
+    }
+
+    .shipment-cargo-bays-count{
+        font-size: 2.8125rem;
+        line-height: 3.4375rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .shipment-cargo-bays-title{
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .shipment-cargo-bays-count{
+        font-size: 2.125rem;
+        line-height: 2.75rem;
+    }
+
+    .shipment-cargo-bays-container{
+        text-align: center;
+    }
+}
+
+

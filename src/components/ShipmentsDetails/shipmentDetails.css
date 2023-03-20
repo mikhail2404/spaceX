@@ -1,0 +1,22 @@
+.shipment-details-container {
+    background: linear-gradient(124.01deg, #2D3038 0%, rgba(45, 48, 56, 0) 100%);
+    border-radius: 30px;
+    padding: 1.8125rem 3.1875rem;
+
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-details-container{
+        padding: 1.8125rem 1.875rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .shipment-details-container {
+        grid-column: 1 / span 2;
+    }
+
+    .shipment-details-container{
+        padding: 1.25rem 1rem;
+    }
+}

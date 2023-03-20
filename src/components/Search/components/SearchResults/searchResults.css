@@ -1,0 +1,38 @@
+.shipment-results{
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+
+    max-width: 20rem;
+    max-height: 12.5rem;
+    background:  var(--black-light-color);
+    box-shadow: rgb(17 12 46 / 15%) 0 48px 100px 0;
+
+}
+
+
+.shipment-result{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.shipment-result:hover{
+    background: var(--grey-light-color);
+}
+
+
+.shipment-result-owner-name {
+    color: var(--white-color);
+    flex: 1;
+}
+
+.shipment-result-owner-email {
+    color: var(--grey-color);
+    font-size: 0.625rem;
+}

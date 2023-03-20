@@ -1,0 +1,32 @@
+.custom-input-container{
+    position: relative;
+    max-width: 20rem;
+    display: flex;
+}
+
+.custom-input {
+    padding: 0.8125rem;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+}
+
+.custom-input::placeholder {
+    color: #000;
+    font-size: 1rem;
+}
+
+.custom-input-icon{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 1rem;
+}
+
+.custom-input-icon + .custom-input{
+    padding-left: 3.1875rem;
+}
