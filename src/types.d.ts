@@ -1,6 +1,6 @@
 interface Shipment {
-    id: string;
-    name: string;
-    email: string;
-    boxes: string;
+  id: string
+  name: string
+  email: string
+  boxes: string
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { ReactComponent as SearchIcon } from '../../assets/searchIcon.svg'
+import { useOutsideClick } from '../../hooks/useClickOutside'
 import CustomInput from '../../ui/CustomInput/CustomInput'
 
 import SearchResults from './components/SearchResults/SearchResults'
@@ -12,6 +13,8 @@ const Search = () => {
   const [searchValue, setSearchValue] = useState<string>('')
   const searchRef = useRef<HTMLDivElement | null>(null)
 
+  useOutsideClick(searchRef, handleSearchEnd)
+
   useEffect(() => {
     window.addEventListener('mousedown', handleClickOutside)
 
@@ -20,6 +23,10 @@ const Search = () => {
     }
   })
   const searchHandler = () => setIsSearching(true)
+
+  function handleSearchEnd() {
+    setIsSearching(false)
+  }
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)
   const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -39,7 +46,13 @@ const Search = () => {
         placeholder="Search"
         className={`${isSearching ? 'search-input-active' : ''}`}
       />
-      {isSearching && <SearchResults searchValue={searchValue} isSearching={isSearching} />}
+      {isSearching && (
+        <SearchResults
+          searchValue={searchValue}
+          isSearching={isSearching}
+          handleResultSelect={handleSearchEnd}
+        />
+      )}
     </div>
   )
 }

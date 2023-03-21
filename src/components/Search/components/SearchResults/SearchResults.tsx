@@ -8,8 +8,9 @@ import './searchResults.css'
 interface SearchResultsProps {
   searchValue: string
   shipments: Shipment[]
+  handleResultSelect: () => void
 }
-const SearchResults = ({ searchValue, shipments }: SearchResultsProps) => {
+const SearchResults = ({ searchValue, shipments, handleResultSelect }: SearchResultsProps) => {
   const [autoCompleteResults, setAutoCompleteResults] = useState<Shipment[]>(shipments)
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const SearchResults = ({ searchValue, shipments }: SearchResultsProps) => {
     <ul className="shipment-results">
       {autoCompleteResults.length ? (
         autoCompleteResults.map((shipment) => (
-          <Link key={shipment.id} to={`/${shipment.id}`}>
+          <Link onClick={handleResultSelect} key={shipment.id} to={`/${shipment.id}`}>
             <li className="shipment-result">
               <h5 className="shipment-result-owner-name">{shipment.name}</h5>
               <p className="shipment-result-owner-email">{shipment.email}</p>
